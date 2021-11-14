@@ -1,0 +1,20 @@
+.medi-r {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  /*   align-content: flex-end;
+     */
+  align-content: center;
+}
+ion-content {
+  --background: white;
+}
+.mr-3 {
+  padding-right: 20px;
+}
+.slide-image {
+  padding-bottom: 20px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}

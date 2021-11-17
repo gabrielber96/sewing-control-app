@@ -14,11 +14,17 @@ const routes: Routes = [
   },
   {
     path: 'session-admin',
-    loadChildren: () => import('./page-sessions/session-admin/session-admin.module').then( m => m.SessionAdminPageModule)
+    loadChildren: () =>
+      import('./page-sessions/session-admin/session-admin.module').then(
+        (m) => m.SessionAdminPageModule
+      ),
   },
   {
     path: 'session-employe',
-    loadChildren: () => import('./page-sessions/session-employe/session-employe.module').then( m => m.SessionEmployePageModule)
+    loadChildren: () =>
+      import('./page-sessions/session-employe/session-employe.module').then(
+        (m) => m.SessionEmployePageModule
+      ),
   },
 ];
 @NgModule({

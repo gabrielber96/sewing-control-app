@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: SessionAdminPage
+  },
+  {
+    path: 'register-employe',
+    loadChildren: () => import('./register-employe/register-employe.module').then( m => m.RegisterEmployePageModule)
   }
 ];
 

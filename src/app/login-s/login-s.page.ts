@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-s',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-s.page.scss'],
 })
 export class LoginSPage implements OnInit {
+  constructor(public router: Router) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  entraDashboard() {
+    this.router.navigate(['dashboard/tabs/tab1']);
   }
-
 }

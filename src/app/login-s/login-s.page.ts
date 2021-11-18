@@ -61,8 +61,14 @@ export class LoginSPage implements OnInit {
         },
 
         async (error) => {
-          console.log(error);
+          const toast = await this.toastController.create({
+            message: error.error.errors[0].msg,
+            duration: 3000,
+          });
+          toast.present();
           loading.dismiss();
+          /*           console.log(error.error.errors[0].msg);
+           */
         }
       );
   }

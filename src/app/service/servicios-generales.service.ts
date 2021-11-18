@@ -18,7 +18,7 @@ export class ServiciosGenerales {
   URL_BACKEND = environment.BACKEND_URL;
 
   constructor(
-    private http: HttpClient,
+    public http: HttpClient,
     private router: Router,
     private menu: MenuController
   ) {}
@@ -32,7 +32,7 @@ export class ServiciosGenerales {
   };
 
   signout() {
-    let headers = new HttpHeaders();
+    /*  let headers = new HttpHeaders();
     headers = headers.set('Content-type', 'application/json');
     headers = headers.set(
       'Authorization',
@@ -55,7 +55,9 @@ export class ServiciosGenerales {
           localStorage.clear();
           this.router.navigateByUrl('/login');
         }
-      );
+      ); */
+    localStorage.removeItem('system_token');
+    localStorage.clear();
   }
 
   RegistrarUser(customer): Observable<any> {
@@ -71,11 +73,11 @@ export class ServiciosGenerales {
     });
   }
 
-  loginNormal(email, password): Observable<any> {
+  loginNormal(dni, password): Observable<any> {
     // console.log(token)
 
-    return this.http.post(this.URL_BACKEND + '/api/signin', {
-      email,
+    return this.http.post(this.URL_BACKEND + '/signin', {
+      dni,
       password,
     });
   }

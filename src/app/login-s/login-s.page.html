@@ -3,27 +3,46 @@
     <ion-col size="12" class="ion-text-center">
       <img src="assets/img/pngegg.png" class="mb-40" height="100px" />
     </ion-col>
-    <ion-row style="width: 100%" class="mb-40">
+
+    <form [formGroup]="form" style="width: 100%">
+      <ion-row style="width: 100%" class="mb-40">
+        <ion-col size="12" class="ion-text-center">
+          <ion-item>
+            <ion-label position="fixed">DNI</ion-label>
+            <ion-input
+              minlength="8"
+              formControlName="dni"
+              autocomplete="off"
+              type="number"
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+          <ion-item>
+            <ion-label position="fixed">Contraseña</ion-label>
+            <ion-input
+              minlength="6"
+              formControlName="password"
+              autocomplete="off"
+              type="password"
+            ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="txt-center">
+        <ion-col size="12" class="mb-40">
+          <a>Olvidó su contraseña</a>
+        </ion-col>
+      </ion-row>
+
       <ion-col size="12" class="ion-text-center">
-        <ion-item>
-          <ion-label position="fixed">Correo</ion-label>
-          <ion-input autocomplete="off" type="email"></ion-input>
-        </ion-item>
+        <ion-button
+          (click)="entraDashboard()"
+          [disabled]="!form.valid"
+          expand="block"
+          >Ingresar</ion-button
+        >
       </ion-col>
-      <ion-col size="12" class="ion-text-center">
-        <ion-item>
-          <ion-label position="fixed">Contraseña</ion-label>
-          <ion-input autocomplete="off" type="password"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-col size="12" class="ion-text-end mb-40">
-      <a>Olvidó su contraseña</a>
-    </ion-col>
-    <ion-col size="12" class="ion-text-center">
-      <ion-button (click)="entraDashboard()" expand="block"
-        >Ingresar</ion-button
-      >
-    </ion-col>
+    </form>
   </ion-row>
 </ion-content>

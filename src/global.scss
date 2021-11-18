@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,39 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.txt-15 {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: normal;
+}
+.txt-start {
+  text-align: start;
+}
+.txt-center {
+  text-align: center;
+}
+
+.txt.end {
+  text-align: end;
+}
+
+.txt-min {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.padd-20 {
+  padding: 20px;
+}

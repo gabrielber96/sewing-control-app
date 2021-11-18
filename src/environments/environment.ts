@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BACKEND_URL: 'http://localhost:4001',
+  BACKEND_URL: 'http://localhost:4000',
 };
 /*
  * For easier debugging in development mode, you can import the following file

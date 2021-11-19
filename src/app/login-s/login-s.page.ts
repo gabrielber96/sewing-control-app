@@ -20,8 +20,8 @@ export class LoginSPage implements OnInit {
   ) {}
 
   form: FormGroup = this.fb.group({
-    dni: ['', [Validators.required]],
-    password: ['', [Validators.required]],
+    dni: ['75652678', [Validators.required]],
+    password: ['1234578', [Validators.required]],
     /*  password: ['', [Validators.required]], */
   });
 
@@ -46,7 +46,7 @@ export class LoginSPage implements OnInit {
     this._serviceG
       .loginNormal(this.form.get('dni').value, this.form.get('password').value)
       .subscribe(
-        async (response: any) => {
+        async (userResponse: any) => {
           const toast = await this.toastController.create({
             message: 'Bievenido, :)',
             duration: 4000,
@@ -56,7 +56,19 @@ export class LoginSPage implements OnInit {
 
           this.router.navigateByUrl('/dashboard/tabs/tab2');
 
-          localStorage.setItem('system_token', response['jwt']);
+          localStorage.setItem('system_token', userResponse['jwt']);
+          localStorage.setItem(
+            'nombreCompleto',
+            (userResponse.name !== null ? userResponse.name : '') +
+              ' ' +
+              (userResponse.lastname !== null ? userResponse.lastname : '')
+          );
+          localStorage.setItem('fotoUsuario', userResponse.path);
+          localStorage.setItem('cumpleaños', userResponse.date);
+          localStorage.setItem('sexo', userResponse.sexo);
+          localStorage.setItem('rol_id', userResponse.rol_id);
+          localStorage.setItem('sub_rol_id', userResponse.sub_rol_id);
+
           loading.dismiss();
         },
 

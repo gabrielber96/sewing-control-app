@@ -1,3 +1,17 @@
 .menucolor {
   color: blue;
 }
+
+.center-button {
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.recocua {
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 115px;
+}

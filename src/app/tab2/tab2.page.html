@@ -6,9 +6,17 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
-  <button ion-button icon-start>
-    <ion-icon name="home"></ion-icon>
-    Home
-  </button></ion-content
->
+  <ion-row *ngFor="let item of fetchData2">
+    <ion-col size="12">
+      <ion-button color="primary" class="w-100 recocua">
+        <div class="center-button">
+          <ion-icon
+            style="height: 37px; width: 37px"
+            name="add-circle-outline"
+          ></ion-icon
+          ><a style="color: white">{{item.name}}</a>
+        </div>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

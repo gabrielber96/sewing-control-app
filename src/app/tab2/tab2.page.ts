@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RolService } from '../service/rol.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss'],
 })
 export class Tab2Page {
-  constructor() {}
+  constructor(private _sRol: RolService) {
+    this.userRol = this._sRol.getR();
+    console.log(this.userRol, 'obteniendo numero en compoennte 2');
+  }
+  userRol;
 
   fetchData2 = [
     { name: 'Test 2', link: '' },
@@ -16,7 +21,5 @@ export class Tab2Page {
 
     { name: 'Test 4', link: '' },
   ];
-  ngOnInit(): void {
-    console.log(this.fetchData2);
-  }
+  ngOnInit(): void {}
 }

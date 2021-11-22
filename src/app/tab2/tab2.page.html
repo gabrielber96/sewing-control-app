@@ -2,7 +2,11 @@
   <div>
     <ion-row *ngFor="let item of fetchData2">
       <ion-col size="12">
-        <ion-button color="primary" class="w-100 recocua">
+        <ion-button
+          routerLink="{{ item.link }}"
+          color="primary"
+          class="w-100 recocua"
+        >
           <div class="center-button">
             <ion-icon
               style="height: 37px; width: 37px"

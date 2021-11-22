@@ -48,8 +48,8 @@ export class LoginSPage implements OnInit {
       .subscribe(
         async (userResponse: any) => {
           const toast = await this.toastController.create({
-            message: 'Bievenido, :)',
-            duration: 4000,
+            message: 'Bievenido, ten un buen día',
+            duration: 2000,
           });
           toast.present();
           this.form.reset();

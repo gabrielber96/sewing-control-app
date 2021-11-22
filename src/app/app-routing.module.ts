@@ -13,7 +13,7 @@ const routes: Routes = [
       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
   },
   {
-    path: 'session-admin',
+    path: 'dashboard/tabs/tab2/session-admin',
     loadChildren: () =>
       import('./page-sessions/session-admin/session-admin.module').then(
         (m) => m.SessionAdminPageModule

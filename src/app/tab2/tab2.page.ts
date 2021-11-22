@@ -17,7 +17,7 @@ export class Tab2Page {
   ngOnInit(): void {
     if (this.userRol == 1) {
       this.fetchData2 = [
-        { name: 'Empleados', ico: '', link: '' },
+        { name: 'Empleados', ico: '', link: 'session-admin' },
         { name: 'Pagos', ico: '', link: '' },
         { name: 'Metricas', ico: '', link: '' },
       ];

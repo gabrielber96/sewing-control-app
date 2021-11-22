@@ -1,12 +1,5 @@
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  <div *ngIf="_sRol.getR() == 1">
+  <div>
     <ion-row *ngFor="let item of fetchData2">
       <ion-col size="12">
         <ion-button color="primary" class="w-100 recocua">
